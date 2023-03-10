@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1> <center> Tienda de ropa online </center> </h1>
+
+    <form action="" method="post" enctype="text/plain">
+        <fieldset>
+            <legend> 
+                Información del Cliente
+            </legend>
+
+            <label for="Nombre"> 
+                Nombre: <br/>
+            </label>
+            <input type="text" placeholder="Nombre" maxlength="12" name="Nombre"
+             id="Nombre" required />
+
+            <br> <br/>            
+            
+            <label for="Usuario"> 
+                Nombre de Usuario: <br/>
+            </label>
+            <input type="text" placeholder="Usuario" maxlength="12" name="Usuario"
+             id="Usuario" />
+
+             <br> <br/>  
+             
+             <label for="Apellido Paterno"> 
+                <br> Apellido Paterno: <br/>
+            </label>
+            <input type="text" placeholder="Apellido Paterno" maxlength="12" name="Apellido Paterno"
+             id="Apellido Paterno" required/>
+             
+             <br> <br/>  
+
+             <label for="Password"><br> Contraseña:<br/> </label>
+            <input type="Password" name="Password" id="Password" placeholder="Password" />
+
+            <br> <br/> 
+
+            <label for="Apellido Materno"> 
+                <br> Apellido Materno: <br/>
+            </label>
+            <input type="text" placeholder="Apellido Materno" maxlength="12" name="Apellido Materno"
+             id="Apellido Materno" required/>
+        </fieldset>
+
+    <form action="" method="post" enctype="text/plain"></form>
+        <fieldset>
+            <legend> 
+                Datos de la Facturación
+            </legend>
+
+            <label for="calle"> 
+                Calle: <br/>
+            </label>
+            <input type="text" placeholder="Usuario" maxlength="12" name="calle"
+             id="calle" />
+
+             <br> <br/>  
+
+             <label for="correo"> <br>E-mail:<br/> </label>
+             <input type="email" placeholder="E-mail" name="correo" id="correo" required/> 
+             
+             <br> <br/>  
+
+             <label for="fechavent"> <br>Fecha de la Venta: <br/> </label>
+            <input type="date"/ name="fechavent" id="fechavent"> <br/>
+           
+            <br> <br/> 
+
+            <label for="Numext"> 
+                Num: <br/>
+            </label>
+            <input type="text" placeholder="Num. Exterior" maxlength="12" name="numtext"
+             id="numtext" />
+
+             <br> <br/>  
+
+             <label for="CodeP"> 
+                Código Postal: <br/>
+            </label>
+            <input type="text" placeholder="C.P" maxlength="12" name="codep"
+             id="codep" />
+
+             <br> <br/>  
+
+             <label for="Col"> 
+                Colonia: <br/>
+            </label>
+            <input type="text" placeholder="Colonia" maxlength="12" name="col"
+             id="col" />
+
+             <br> <br/>  
+
+             <label for="rfc"> 
+                RFC: <br/>
+            </label>
+            <input type="text" placeholder="R.F.C" maxlength="12" name="rfc"
+             id="rfc" required/>
+
+             <br> <br/>  
+
+                </fieldset>
+
+                <form action="" method="post" enctype="text/plain">
+                    <fieldset>
+                        <legend> 
+                            Datos del articulo adqurido 
+                        </legend>
+                        
+                        <h5>Tipo</h5>
+
+                        <select size="5" multiple>
+                            <option> Vestido  </option>
+                            <option> Falda </option>
+                            <option> Pantalón </option>
+                            <option> Playera </option>
+                            <option> Camisa </option>
+                        </select>  
+
+                    <h5> Talla </h5>
+           
+                    <input type="checkbox" name="talla1" id="talla1" value="talla1"/>
+                    <label for="talla1"> Chico </label><br/>
+
+                    <input type="checkbox" name="talla2" id="talla2" value= "talla2"/>
+                    <label for="talla2"> Mediano </label><br/>
+
+                    <input type="checkbox" name="talla3" id="talla3" />
+                    <label for="talla3"> Grande </label><br/>
+
+                    <label for="colores"><br> Selecciona el color: <br/></label>
+                    <input type="color" name="colores" id="colores"/></br>
+
+                    <br><input type="submit" value="Enviar Datos" /></br>
+                    <br><input type="reset" value="Borrar Datos"></br>
+                    </fieldset>   
+                    
+                    <footer>
+                        <p align="right"><b>© Distribuidora de Ropa en Linea 2023</b></p>
+                      </footer>   
+    </form>
+</body>
+</html>
