@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cinépolis</title>
+    <body background="fondo.jfif" style="background-repeat: no-repeat; background-size: cover;"></body>
+</head>
+
+<body>
+ <h1> COMPRA DE BOLETOS </h1>
+  <table>
+    <td><section>
+       <div class="contenedor">
+  
+            <label for="Usuario">Nombre de usuario:</label><br>
+                <input type="text" placeholder="Usuario" maxlength="10" name="Usuario" id="Usuario" required/>
+
+                <br><label for="Contra">Contraseña: </label><br>
+                <input type="text" placeholder="Contraseña" maxlength="15" name="Contra" id="Contra" required>
+                
+                <br/><label for="Fecha" name="Fecha" id="Fecha">Fecha de función</label><br/>
+                <input type="date" / name="Fecha" id="Fecha"><br/>
+
+                <br><label for="Hora">Horarios disponibles</label><br>
+                <select name="Hora">
+                    <option>14:30pm</option>
+                    <option>18:30pm</option>
+                    <option>20:00pm</option>
+                    <option>22:30pm</option>
+                </select><br>
+
+                <br><label for="movie">Pelicula a ver: </label><br>
+              <select name="movie">
+                  <option>After </option>  
+                  <option>El gato con botas</option>
+                  <option>365 DNI</option>
+                  <option>La ceniecienta</option>
+              </select><br>
+
+            <br/><label for="Cantidad">Cantidad de boletos: </label><br/>
+            <input type="number" name="Cantidad" id="Cantidad" value="5"/>
+
+              <br><label for="mpago">Método de pago</label><br>
+              <select name="pago">
+                  
+                  <option>Tarjeta de Débito</option>
+                  <option>Transferencia</option>
+                  <option>PayPal</option>
+
+              </select><br>
+
+              <br/><label for="vencimiento" name="vencimiento" id="Vencimiento">Fecha de vencimiento</label><br/>
+              <input type="date" / name="vencimiento" id="vencimiento"><br/>
+            
+                <br><input type="submit" value="Confirmar la compra"/></br>
+                <br><input type="reset" value="Borrar Datos"></br>
+        </form>
+       </div>
+    </section><td/>
+</table>
+</body>
+</html>
