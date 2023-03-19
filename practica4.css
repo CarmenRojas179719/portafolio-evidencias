@@ -1,0 +1,72 @@
+body
+{
+    background-color: #fdf1ff;
+    font-family:Arial, Helvetica, sans-serif;
+}
+
+div
+{
+    background-color: #eaffe3;
+}
+
+#Definicion
+{
+    color: #c24ea7;
+    font-size: 20px;
+    font-style: oblique;
+}
+
+#Ultimo
+{
+    color: #e7a2d8;
+    font-size: 20px;
+    font-style: oblique;
+}
+#Poetas
+{
+    text-decoration: underline;
+    color:#882298;
+    font-size: 25px;
+    font-weight: bold;
+}
+#AmadoNervo
+{
+    text-decoration: underline;
+    color: #0100ff;
+    font-size: 15px;
+    font-weight: bold;
+}
+
+#Octavio
+{
+    color: #0100ff;
+    font-size: 30px;
+}
+#Jaime
+{
+    color: #0100ff;
+    font-size: 30px;
+}
+#SorJuana
+{
+    color: #0100ff;
+    font-size: 30px;
+}
+
+#CarmenB
+{
+    color: #0100ff;
+    font-size: 30px;
+}
+
+#JavierV
+{
+    color: #0100ff;
+    font-size: 30px;
+}
+
+#PoetasMexicanos
+{
+    color: #0100ff;
+    font-size: 30px;
+}
