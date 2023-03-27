@@ -1,0 +1,106 @@
+*{
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    vertical-align: baseline;
+}
+
+body 
+{
+    text-align: center;
+    font-family: sans-serif;
+}
+
+.head 
+{
+    display: flex;
+    align-items: right;
+    justify-content: space-between;
+    height: 63px;
+    background: #00401f;
+    position: fixed;
+    width: 100%;
+    z-index: 100;
+}
+
+.navbar
+ {
+    text-align: right;
+    display: flex;
+    margin-right: 10px;
+    justify-content: space-between;
+    align-items: center;
+   
+}
+
+.navbar a:hover 
+{
+    background: #5beeb1;
+}
+
+.header 
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.content
+ {
+    height: 50vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.tittle1
+{
+    
+    font-size: 50px;
+    font-weight: 200;
+    text-transform: uppercase;
+    color: #080000;
+    font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+
+.institucion
+{
+    font-size: 40px;
+    font-weight: 100;
+    text-transform: uppercase;
+    color: #080000;
+    font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+
+.mision
+{
+    font-size: 30px;
+    font-weight: 100;
+    text-transform: uppercase;
+    color: #080000;
+    font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+
+.vision
+{
+    font-size: 30px;
+    font-weight: 100;
+    text-transform: uppercase;
+    color: #080000;
+    font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+
+.parrafom
+{
+    color: #f7f1f1;
+    font-family:'Times New Roman', Times, serif;
+}
+
+.parrafov
+{
+    color: #f7f1f1;
+    font-family:'Times New Roman', Times, serif;
+}
