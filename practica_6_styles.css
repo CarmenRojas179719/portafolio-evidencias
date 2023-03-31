@@ -1,0 +1,78 @@
+.texto
+{
+    display: block;
+    text-align: center;
+    border: 2px solid rgb(174, 70, 206);
+    padding: 30px;
+    border-width: 3px;
+    background-color: rgb(68, 3, 42);
+    font-family:'Times New Roman', Times, serif;
+    font-size: 30px;
+    color: rgb(184, 20, 135);
+    width: 60%;
+    height: 50px;
+    margin: 0 auto;
+    margin-top: 230px;
+    margin-bottom: 230px;
+}
+
+.texto:hover
+{
+    display: block;
+    text-align: center;
+    border: 2px solid rgb(22, 101, 165);
+    padding: 30px;
+    border-width: 3px;
+    font-family: 'Lily Script One', cursive;
+    letter-spacing: 4px;
+    font-size: 40px;
+    color: rgba(1, 28, 67, 0.342);
+    width: 80%;
+    height: 60px;
+    margin: 0 auto;
+    margin-top: 230px;
+    margin-bottom: 230px;
+    transform: skew(20de);
+    -moz-transform:skew(20deg);
+    -webkit-transform:skew(20deg);
+    -moz-border-radius: 50px 50px 50px 50px;
+    -webkit-border-radius: 50px 50px 50px 50px;
+    border-radius: 50px 50px 50px 50px;
+    background: radial-gradient(circle, rgba(202,235,180,0.7651435574229692) 0%, rgba(252,216,70,1) 100%);
+    background: -moz-radial-gradient(circle, rgba(202,235,180,0.7651435574229692) 0%, rgba(252,216,70,1) 100%);
+    background: radial-gradient(circle, rgba(202,235,180,0.7651435574229692) 0%, rgba(252,216,70,1) 100%);
+    background: -webkit-radial-gradient(circle, rgba(202,235,180,0.7651435574229692) 0%, rgba(252,216,70,1) 100%);
+    /*-webkit-transition: all 10s;
+    transition: all 10s;*/
+    }
+
+
+.texto:active
+{
+    display: block;
+    text-align: center;
+    border: 2px solid rgb(209, 42, 42);
+    padding: 30px;
+    border-width: 3px;
+    font-family: 'Merienda', cursive;
+    letter-spacing: 4px;
+    font-size: 40px;
+    color: rgba(126, 7, 7, 0.945);
+    width: 80%;
+    height: 60px;
+    margin: 0 auto;
+    margin-top: 230px;
+    margin-bottom: 230px;
+    transform: skew(20de);
+    -moz-transform:skew(20deg);
+    -webkit-transform:skew(20deg);
+    -moz-border-radius: 50px 50px 50px 50px;
+    -webkit-border-radius: 50px 50px 50px 50px;
+    border-radius: 50px 50px 50px 50px;
+    background: radial-gradient(circle, rgba(238,221,174,1) 7%, rgba(178,148,233,1) 80%);
+    background: -moz-radial-gradient(circle, rgba(238,221,174,1) 7%, rgba(178,148,233,1) 80%);
+    background: -webkit-radial-gradient(circle, rgba(238,221,174,1) 7%, rgba(178,148,233,1) 80%);
+    -moz-box-shadow: rgb(1, 55, 71) 10px 5px 20px outset;
+    -webkit-box-shadow: rgb(1, 55, 71) 10px 5px 20px outset;
+    box-shadow: rgb(4, 38, 48) 10px 5px 20px  outset;
+}
