@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Propiety</title>
+
+    <style>
+
+        #contenedor1
+        {
+            position: static;
+            border: 1px solid blue;
+            width: 500px;
+            height: 100px;
+        }
+
+        #hijo1
+        {
+            position: absolute;
+            border: 1px solid rgb(150, 227, 158);
+            width: 250px;
+            right: 150px;
+        }
+    </style>
+</head>
+<body>
+    <h1> Propiedad Position</h1>
+    <h2> position; static</h2>
+
+    <p> El elemento contenedor 1 tiene position; static
+        permanecera en el fjujo natural de la página.
+        NO actuara como punto de anclaje para el elemento absolutamente posicionado:
+    </p>
+
+    <div id="contenedor1"> Contenedor1: 
+    
+        <div id="hijo1"> Hijo 1 </div>
+    </div>
+
+</body>
+</html>
