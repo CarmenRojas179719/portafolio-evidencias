@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Ubuntu+Mono&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Oranienbaum&display=swap" rel="stylesheet">
+
+    <title>Las Princesas</title>
+
+    <style>
+        body 
+        {
+            background-image: url(fondo_princess.png);
+            background-attachment: fixed;
+            background-size: 100% 100%;
+        }
+
+        .princess-title
+        {
+            position: absolute; 
+			top: 20px; 
+			right: 20px; 
+			padding: 20px; 
+			background-color: pink; 
+			border-radius: 20px; 
+			font-family: 'Montserrat', sans-serif; 
+			font-size: 36px; 
+			color: white; 
+			text-align: center; 
+		}
+
+        .princesas-li 
+		{
+    		font-family: 'Ubuntu Mono', monospace;
+    		text-align: center;
+    		background-color: #ff60ca;
+    		color: white;
+    		display: block;
+    		list-style: none;
+    		padding: 5px;
+    		width: 40%;
+    		position: relative;
+  		}
+  
+  		.princesas-li:hover .princesas
+		{
+    		background-color: rgb(156, 10, 175);
+    		display: block;
+    		opacity: 1;
+ 		 }
+  
+  		.princesas
+		{
+    		color: rgb(158, 27, 167);
+    		background-color: rgb(255, 202, 231);
+    		margin: 0;
+    		padding: 0;
+    		width: 100%;
+    		position: absolute;
+    		left: 0;
+    		top: 100%;
+    		opacity: 0;
+    		display: none;
+  		}
+  
+  		.princesas li
+		{
+			color: rgb(255, 255, 255);
+			background-color: rgb(225, 10, 236);
+			list-style: none;
+ 		}
+
+         .princesas li:hover
+		{
+    		color: rgb(255, 0, 200);
+			cursor: zoom-in;
+			list-style: none;
+  		}		
+
+  		.princesas li a 
+		{
+			text-decoration: none;
+			font-family: 'Oranienbaum', cursive;
+ 		}
+
+  		.princesas li:hover 
+		{
+    		background: #c60cff;
+    		color: #b75996;
+		}
+
+  		.princesas-li li ul li
+		{
+    		height: 0;
+    		line-height: 1.5em;
+    		background: #fdfdfd;
+    		padding: 0;
+    		margin: .25em .5em .25em .5em;
+    		overflow: hidden;
+     		float:none;
+     		position:relative;
+     		right:0;
+     		-moz-transition-duration:.3s;
+     		-webkit-transition-duration:.3s;
+     		-o-transition-duration:.3s;
+     		transition-duration:.3s;
+  		}	
+
+  		.blackpink-li li ul li:hover
+		{
+    		border-left: 5px solid #b13eac;
+		}
+
+
+		.blackpink-li li:hover ul li
+		{
+     		min-height: 2em;
+     		display: block;
+     		float: none;
+		}
+
+		a
+		{
+    		color: white;
+		}
+
+    </style>
+</head>
+<body>
+    <h1 class="princess-title">Las Princesas Disney</h1> 
+
+    <nav>
+        <li class="princesas-li">
+          Mas Princesas
+          <ul class="princesas">
+            <li><a href="#">Princesa Aurora</a></li>
+            <li><a href="#">Princesa Cenicienta</a></li>
+            <li><a href="#">Princesa Bella</a></li>
+          </ul>
+        </li>
+    </nav>
+</body>
+</body>
+</html>
