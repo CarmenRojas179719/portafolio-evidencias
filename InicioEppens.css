@@ -1,0 +1,164 @@
+body{
+    font-family: sans-serif;
+    background-color: #060040;
+}
+
+nav {
+    width: 100%;
+    overflow: visible;
+}
+nav ul {
+    padding: 0;
+    list-style: none;
+    text-align: right;
+}
+
+nav li {
+    display: inline-block;
+    margin-right: 0;
+}
+
+nav a {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: 20px;
+    color: rgb(255, 255, 255);
+    text-align: right;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+nav a:hover {
+    text-decoration: underline;
+    color: rgb(255, 255, 255);
+}
+
+.titulo{
+    padding: 10px;
+    text-align: center;
+    font-size: 50px;
+    font-family: arial;
+}
+
+img:hover{
+    border: 2px solid gray;
+}
+
+.banner{
+    background-color: #060040;
+    border: none;
+    text-align: center;
+    align-items: center;
+    width: 100%;
+}
+
+.banner td, th {
+    background-color: #060040;
+    color: white;
+    border: none;
+    align-items: center;
+    padding: 0;
+  }
+
+.info{
+    
+    width: 100%;
+    background-color: white;
+    border-radius: 3px;
+  }
+
+.MisionVision{
+    margin: auto 0;
+    vertical-align: middle;
+    text-align: center;
+    width: 100%;
+}
+
+.MisionVision td, th {
+    align-content: center;
+    width: 500px;
+    text-align: justify;
+    align-items: center;
+    margin: auto 0;
+    padding: 30px;
+  }
+
+  h2{
+    padding: 10px;
+    text-align: center;
+  }
+
+.ayuda{
+    margin: 0 auto;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.455);
+    border-radius: 3px;
+}
+
+.preguntas{
+    text-align: center;
+    font-size: 17px;
+    margin: 0 auto;
+    width: 90%;
+    padding: 10px;
+}
+
+.inscripcion{
+    width: 100%;
+    color: rgb(255, 255, 255);
+    background-color: #3c4c8f;
+    padding: 5px;
+    border-radius: 3px;
+    list-style: decimal;
+}
+
+.ubicacion{
+    width: 100%;
+    color: rgb(255, 255, 255);
+    background-color: #3c4c8f;
+    padding: 5px;
+    border-radius: 3px;
+    list-style: decimal;
+}
+
+
+.respuestas{
+    text-align: justify;
+    padding: 10px;
+    margin: 0 auto;
+    width: 100%;
+    background-color: rgb(255, 255, 255);
+    border-radius: 3px;
+}
+  
+.pf{
+    color: white;
+    padding: 30px;
+}
+  
+.facebook a{
+    font-size: 20px;
+    color: rgb(0, 0, 0);
+    text-decoration: none;
+}
+
+.facebook:hover a{
+    color: blue;
+    text-decoration: underline;
+}
+
+.redes{
+    background: #fbfbfb;
+    margin: auto 0;
+    vertical-align: middle;
+    text-align: center;
+    width: 100%;
+}
+
+.redes td, th {
+    align-content: center;
+    width: 500px;
+    text-align: justify;
+    align-items: center;
+    margin: auto 0;
+    padding: 10px;
+  }
