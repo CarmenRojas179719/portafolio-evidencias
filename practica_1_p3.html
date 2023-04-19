@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Operaciones Matemáticas</title>
+
+    <link rel="shortcut icon" href="logo_mat.jfif">
+
+    <script>
+        function Sumar()
+        {
+    
+            var num1,num2,resultado;
+            num1=prompt("Escriba un número","");
+            num2=prompt("Escribe otro numero","");
+    
+            resultado=parseInt(num1)+parseInt(num2);
+
+            alert("El resultado de la suma es: "+resultado);
+        }
+
+        function Restar()
+        {
+    
+            var num1,num2,resultado;
+            num1=prompt("Escriba un número","");
+            num2=prompt("Escribe otro numero","");
+    
+            resultado=parseInt(num1)-parseInt(num2);
+
+            alert("El resultado de la resta es: "+resultado);
+        }
+
+        function Multiplicar()
+        {
+    
+            var num1,num2,resultado;
+            num1=prompt("Escriba un número","");
+            num2=prompt("Escribe otro numero","");
+    
+            resultado=parseInt(num1)*parseInt(num2);
+
+            alert("El resultado de la multipicación es: "+resultado);
+        }
+
+        function Dividir()
+        {
+    
+            var num1,num2,resultado;
+            num1=prompt("Escriba un número","");
+            num2=prompt("Escribe otro numero","");
+    
+            resultado=parseInt(num1)/parseInt(num2);
+
+            alert("El resultado de la divición es: "+resultado);
+        }
+
+        function Positivo_Negativo()
+        {
+            var num;
+            num=prompt("Escriba un número","");
+            if (num < 0) {
+            alert("El número es negativo");
+            } else if (num > 0) {
+            alert("El número es positivo");
+            } 
+        }
+
+    </script>
+
+    <style>
+        input{
+            display: block;
+            text-align: center;
+            padding: 10px;
+            margin-top: 20px;
+            background-color: rgba(26, 110, 143, 0.589);
+            border-radius: 10px;
+            width: 100%;
+        }
+
+        h1{
+            text-align: center;
+            color: blueviolet;
+
+        }
+    </style>
+
+</head>
+<body>
+    <h1> O P E R A C I O N E S    M A T E M A T I C A S </h1>
+
+    <div>
+        <form method="post" enctype="text/plain">
+            
+            <input type="button" name="Suma"
+            value="Sumar" onclick="Sumar()"/>
+
+            <input type="button" name="Resta"
+            value="Restar" onclick="Restar()"/>
+
+            <input type="button" name="Multiplica"
+            value="Multiplicar" onclick="Multiplicar()"/>
+
+            <input type="button" name="Divide"
+            value="Dividir" onclick="Dividir()"/>
+
+            <input type="button" name="Positivo o Negativo"
+            value="¿Es Positivo o Negativo?" onclick="Positivo_Negativo()"/>
+        </form>
+    </div>
+</body>
+</html>
