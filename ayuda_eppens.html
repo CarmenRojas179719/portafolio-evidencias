@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ayuda|Sec.Of Francisco Eppens Helguera</title>
+    <link rel="shortcut icon" href="logo.png">
+
+    <style>
+        
+        body
+         {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: #333;
+            color: #fff;
+            padding: 10px;
+        }
+
+        h1 {
+            margin: 0;
+        }
+
+        main {
+            margin: 20px;
+        }
+
+        h2 {
+            color: #333;
+        }
+
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        li {
+            margin-bottom: 10px;
+        }
+
+        label {
+            display: block;
+            font-weight: bold;
+        }
+
+        input[type="text"], textarea {
+            width: 100%;
+            padding: 5px;
+            margin-bottom: 10px;
+        }
+
+        button[type="submit"] {
+            background-color: #333;
+            color: #fff;
+            border: none;
+            padding: 5px 10px;
+            cursor: pointer;
+        }
+
+        button[type="submit"]:hover {
+            background-color: #444;
+        }
+
+        /* Estilos para los comentarios */
+        #comentarios {
+        margin-top: 50px;
+        }
+
+        #form-comentario {
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 20px;
+        }
+
+        #form-comentario label {
+        margin-bottom: 10px;
+        }
+
+        #form-comentario input,
+        #form-comentario textarea {
+        padding: 10px;
+        border-radius: 5px;
+        border: 1px solid #ccc;
+        margin-bottom: 10px;
+        }
+
+        #form-comentario textarea {
+        height: 100px;
+        }
+
+        #lista-comentarios {
+        list-style: none;
+        }
+
+        #lista-comentarios li {
+        margin-bottom: 20px;
+        padding: 10px;
+        border-radius: 5px;
+        border: 1px solid #ccc;
+        }
+
+        #lista-comentarios li h3 {
+        margin: 0 0 10px;
+        }
+
+        #lista-comentarios li p {
+        margin: 0;
+        }
+
+    </style>
+
+    <script>
+        
+        var formComentario = document.querySelector('#form-comentario');
+        var listaComentarios = document.querySelector('#lista-comentarios');
+
+        function agregarComentario(nombre, comentario) 
+        {
+        const li = document.createElement('li');
+        const h3 = document.createElement('h3');
+        const p = document.createElement('p');
+        h3.textContent = nombre;
+        p.textContent = comentario;
+        li.appendChild(h3);
+        li.appendChild(p);
+        listaComentarios.appendChild(li);
+        }
+
+        formComentario.addEventListener('submit', (e) => {
+        e.preventDefault(); 
+        var nombre = e.target.nombre.value;
+        var comentario = e.target.comentario.value;
+        agregarComentario(nombre, comentario);
+        e.target.reset();
+        });
+
+    </script>
+
+</head>
+
+<body style=background-color:#c6d9ef; style="background-repeat: no-repeat; background-size: cover;">
+    <header>
+        <h1>Dudas y comentarios de la Sec. Eppens</h1>
+    </header>
+    <main>
+        <h1>AVISO</h2>
+        <p>Se le informa a toda nuestra comunidad educativa que el día Lunes 16 de Enero se <br> reanudan las actividades escolares de manera PRESENCIAL con la totalidad de los alumnos. <br>
+        <br> Solicitamos a todos los padres de familia y alumnos seguir atendiendo las recomendaciones <br> de la secretaría de salud en cuanto al uso del cubrebocas, 
+        lavado de manos y uso de gel antibacterial.</p>
+
+        <section id="comentarios">
+            <h2>Comentarios</h2>
+            <form id="form-comentario">
+            <div>
+                <label for="nombre">Nombre:</label>
+                <input type="text" id="nombre" name="nombre" required>
+            </div>
+            <div>
+                <label for="comentario">Comentario:</label>
+                <textarea id="comentario" name="comentario" required></textarea>
+            </div>
+            <button type="submit">Enviar</button>
+            </form>
+            <ul id="lista-comentarios"></ul>
+        </section>
+        
+    </main>
+    
+    <script src="script.js"></script>
+
+</body>
+</html>
