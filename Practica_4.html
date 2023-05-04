@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Generador de RFC</title>
+    
+    <style type="text/css">
+        body 
+        {
+            font-family: Arial, sans-serif;
+            margin: 0;
+        }
+
+        div
+        {
+                
+        }
+
+        h1 
+        {
+            background-color: #333;
+            color: white;
+            margin: 0;
+            padding: 20px;
+            text-align: center;
+        }
+
+        form 
+        {
+            margin: 20px;
+        }
+
+        label 
+        {
+            display: inline-block;
+            margin: 5px;
+        }
+
+        input[type="text"],
+        input[type="number"] 
+        {
+          padding: 5px;
+        }
+
+        input[type="button"]
+        {
+          margin: 10px;
+        }
+
+        p#rfc 
+        {
+            margin: 20px;
+            padding: 10px;
+            border: 1px solid #333;
+            background-color: #f0f0f0;
+            text-align: center;
+        }
+
+    </style>
+
+    <script>
+        function generarRFC() {
+        var nombre = document.getElementById("nombre").value.toUpperCase();
+        var apellidoPaterno = document.getElementById("apellidoPaterno").value.toUpperCase();
+        var apellidoMaterno = document.getElementById("apellidoMaterno").value.toUpperCase();
+        var year = document.getElementById("year").value.slice(-2);
+        var mes = ("00" + document.getElementById("mes").value).slice(-2);
+        var dia = ("00" + document.getElementById("dia").value).slice(-2);
+        var rfc = apellidoPaterno.slice(0,2) + apellidoMaterno.slice(0,1) + nombre.slice(0,1) + year + mes + dia;
+        document.getElementById("rfc").textContent = "Su RFC es: " + rfc;
+}
+
+    </script>
+
+  </head>
+
+  <body>
+    <h1>Generador de RFC</h1>
+    
+    <form>
+        <label>Nombre:</label>
+        <input type="text" id="nombre"><br>
+        <br>
+        <label>Apellido Paterno:</label>
+        <input type="text" id="apellidoPaterno"><br>
+        <br>
+        <label>Apellido Materno:</label>
+        <input type="text" id="apellidoMaterno"><br>
+        <br>
+        <label>Fecha de nacimiento:</label><br>
+        <label>Día:</label>
+        <input type="number" id="dia" min="1" max="31">
+        <label>Mes:</label>
+        <input type="number" id="mes" min="1" max="12">
+        <label>Año:</label>
+        <input type="number" id="year" min="1900" max="2023"><br>
+        <br>
+        <input type="button" value="Generar RFC" onclick="generarRFC()">
+      </form>
+      <p id="rfc"></p>
+
+    <script src="script.js"></script>
+  </body>
+</html>
