@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contacto|Sec.OF.Francisco Eppens Helguera</title>
+    <link rel="stylesheet" href="InicioEppens.css">
+    <link rel="shortcut icon" href="logo.png">
+    
+    <style>
+        label 
+        {
+            display:block;
+            margin-top:20px;
+            letter-spacing:1px;
+        }
+ 
+        .principal 
+        {
+            display:block;
+            margin:0 auto;
+            width:510px;
+            color: #fafafa;
+            font-family:Arial;
+        }
+ 
+        form 
+        {
+            margin:0 auto;
+            width:400px;
+        }
+ 
+        input, textarea 
+        {
+            width:380px;
+            height:27px;
+            background:#fcfbfb;
+            border:2px solid #f6f6f6;
+            padding:10px;
+            margin-top:5px;
+            font-size:10px;
+            color:#4b0f9a;
+        }
+ 
+        textarea 
+        {
+            height:150px;
+        }
+ 
+        #submit
+        {
+            width:85px;
+            height:35px;
+            border:none;
+            margin-top:20px;
+            cursor:pointer;
+        }
+    </style>
+</head>
+
+<header>
+    <table class="banner">
+        <tr>
+        
+        <td><p style="font-size: 20px;">Escuela Secundaria Francisco Eppens Helguera</p></td>
+        <td>
+            <nav>
+                <ul>
+                    <li><a href="index_secundaria.html">Inicio</a></li>
+                    <li><a href="admision.html">Proceso de admisión</a></li>
+                    <li><a href="galeria.html">Galeria</a></li>
+                    <li><a href="contacto_eppens.html">Contacto</a></li>
+                    <li><a href="ayuda_eppens.html">Ayuda</a></li>
+                </ul>
+            </nav>
+        </td>
+        
+    </tr>
+    </table>
+</header>
+
+<body style=background-color:#c6d9ef; style="background-repeat: no-repeat; background-size: cover;">
+    <h1><center> FORMULARIO DE CONTACTO </center></h1>
+    <h2> <center> Si tienes alguna duda favor de contestar el siguiente formulario con tus dudas y te responderemos a la brevedad posible. </center> </h2>
+    <section class="principal">
+        <form action="procesar_formulario.php" method="POST">
+            <label for="nombre">Nombre:</label>
+            <input id="nombre" name="nombre" placeholder="Nombre completo">
+            <label for="email">Email:</label>
+            <input id="email" name="email" type="email" placeholder="179719@upslp.edu.mx">
+            <label for="mensaje">Mensaje:</label>
+            <textarea id="mensaje" name="mensaje" placeholder="Danos tu mensaje"></textarea>
+            <input id="submit" name="submit" type="submit" value="Enviar">
+     </form>
+    </section>
+    
+</body>
+</html>
