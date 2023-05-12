@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cuestionario|Programación Web</title>
+    <link rel="icon" href="desarrollo-web-3.jpg">
+	<title>Desarrollo Web</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <link rel="stylesheet" href="obt_tot.css">
+	<link href="https://fonts.googleapis.com/css?family=Charmonman" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Roboto+Condensed" rel="stylesheet">	
+
+</head>
+
+    <script>
+    var total;
+    function califica()
+        {var total=0;// Inicializa la variable 'total' para almacenar la puntuación total
+            for (var x=1;x<=5;x++)//Itera sobre las 5 preguntas del cuestionario
+            {
+            var res=0;// Inicializa la variable 'res' para almacenar la puntuación de cada pregunta
+            var nom="r"+x;// Obtiene el nombre del grupo de opciones de cada pregunta
+            var resul=document.getElementsByName(nom);// Obtiene todas las opciones de respuesta de cada pregunta
+            for(var i=0;i<resul.length;i++)// Itera sobre las opciones de respuesta
+            {
+                if(resul[i].checked==true)// Verifica si la opción está seleccionada
+                    res=parseInt(resul[i].value);// Asigna el valor de la opción seleccionada a 'res'
+            }
+            total=total+res;// Suma la puntuación de la pregunta a la puntuación total
+            document.getElementById("total").innerHTML="Puntos obtenidos: "+total+" Puntos";
+            }
+            //Evalúa la puntuación total y muestra un mensaje de acuerdo al resultado
+            if(total==50)
+            if(total==50)
+                document.getElementById("comentario").innerHTML="EXCELENTE!!!";
+            else
+                if(total==30)
+                document.getElementById("comentario").innerHTML="Regular!!";
+            else
+                if(total<=20)
+                document.getElementById("comentario").innerHTML="Estudia un poco más";
+        }
+    </script>
+
+    <body>
+        <div id="contiene">
+        <h1>¿Que tanto sabes de?</h1>
+        <h1>PROGRAMACION WEB</h1>
+
+    <center><img src="web-dev.jpg" alt="Imagen de ejemplo" width="250px"></center> 
+    <form>
+    <div>
+        
+        <ul>
+
+            <li>¿Qué es programación Web?</li>
+            <input type="radio" name="r1" id="r1" value="10"/>La programación web es crear páginas y sitios en Internet.<br/><br/>
+
+            <input type="radio" name="r1" id="r1" value="0"/>Crear, mantener y administrar un proyecto web para 
+            garantizar que su rendimiento<br/><br/>
+
+            <input type="radio" name="r1" id="r1" value="0"/>El desarrollo web es un proceso complejo 
+            que implica la creación de productos digitales en línea. <br/><br/>
+
+            <input type="radio" name="r1" id="r1" value="0"/>Ninguna de las anteriores<br/><br/>
+            
+            <br>
+            
+            <li>¿Qué es Backend?</li>
+            <input type="radio" name="r2" id="r2" value="0"/>Backend se refiere al diseño y desarrollo de la interfaz de usuario de un sitio web.<br/><br/>
+
+            <input type="radio" name="r2" id="r2" value="0"/>Backend se refiere a los lenguajes de programación utilizados para la programación en el lado del cliente.<br/><br/>
+
+            <input type="radio" name="r2" id="r2" value="10"/>Backend se refiere a todos los lenguajes y herramientas que intervienen 
+            en la renderización de cualquier proyecto en el lado del servidor.<br/><br/>
+
+            <input type="radio" name="r2" id="r2" value="0"/>Backend se refiere a las herramientas y tecnologías utilizadas para el diseño y desarrollo de aplicaciones móviles.<br/><br/>
+
+            <br>
+
+            <li>¿Qué hace un desarrollador Web?</li>
+            <input type="radio" name="r3" id="r3" value="0"/>Los desarrolladores web no son responsables de la creación de plataformas en línea, esa tarea es responsabilidad de
+            los desarrolladores de software.<br/><br/>
+
+            <input type="radio" name="r3" id="r3" value="0"/>Un desarrollador web solo se encarga de crear páginas web y 
+            no tiene la responsabilidad de mantenerlas.<br/><br/>
+
+            <input type="radio" name="r3" id="r3" value="0"/>Un desarrollador web solo trabaja en la creación de aplicaciones móviles y no en páginas web.<br/><br/>
+
+            <input type="radio" name="r3" id="r3" value="10"/>Un desarrollador web es el encargado de crear y mantener 
+            cualquier proyecto (páginas web, plataformas y aplicaciones…).<br/><br/>
+
+            <br>
+
+            <li>¿Cuál es el sueldo de un Desarrollador Web?</li>
+            <input type="radio" name="r4" id="r4" value="0"/>Rango Salarial: Junior: 5K/ Senior: 45K<br/><br/>
+
+            <input type="radio" name="r4" id="r4" value="0"/>Rango Salarial: Junior: 80K/ Senior: 123K<br/><br/>
+
+            <input type="radio" name="r4" id="r4" value="10"/>Rango Salarial: Junior: 20K/ Senior: 100K<br/><br/>
+
+            <input type="radio" name="r4" id="r4" value="0"/>Rango Salarial: Junior: 150K/ Senior: 95K<br/><br/>
+
+            <br>
+
+            <li>¿Qué es Frontend?</li>
+            <input type="radio" name="r5" id="r5" value="10"/>Frontend hace referencia al desarrollo para la renderización de 
+            contenido del lado del cliente. <br/><br/>
+
+            <input type="radio" name="r5" id="r5" value="0"/>Frontend se refiere exclusivamente al desarrollo para la renderización
+            de contenido del lado del servidor.<br/><br/>
+
+            <input type="radio" name="r5" id="r5" value="0"/>Frontend se enfoca en el desarrollo de aplicaciones móviles y no en la 
+            renderización de contenido del lado del cliente.<br/><br/>
+
+            <input type="radio" name="r5" id="r5" value="0"/>Frontend no tiene ninguna relación con la renderización de contenido, 
+            se centra únicamente en el diseño visual de un proyecto web.<br/><br/>
+        </ul>
+        
+    </div>
+    <input type="button" value="Calificar" onclick="califica()"><br><br>
+
+    </form>
+    <p></p>
+    <p id="total">   </p>
+    <p id="comentario">   </p>
+    <iframe frameborder="0" width="600" height="500"></iframe>
+    </div>
+    </body>
+    </html>
+    </body>
+</html>
