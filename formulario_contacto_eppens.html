@@ -9,53 +9,65 @@
     <link rel="shortcut icon" href="logo.png">
     
     <style>
-        label 
-        {
-            display:block;
-            margin-top:20px;
-            letter-spacing:1px;
-        }
- 
-        .principal 
-        {
-            display:block;
-            margin:0 auto;
-            width:510px;
-            color: #fafafa;
-            font-family:Arial;
-        }
- 
-        form 
-        {
-            margin:0 auto;
-            width:400px;
-        }
- 
-        input, textarea 
-        {
-            width:380px;
-            height:27px;
-            background:#fcfbfb;
-            border:2px solid #f6f6f6;
-            padding:10px;
-            margin-top:5px;
-            font-size:10px;
-            color:#4b0f9a;
-        }
- 
-        textarea 
-        {
-            height:150px;
-        }
- 
-        #submit
-        {
-            width:85px;
-            height:35px;
-            border:none;
-            margin-top:20px;
-            cursor:pointer;
-        }
+            body {
+        font: 13px/1.85em 'Open Sans', Arial, Helvetice Neue, sans-serif;
+        color: #888888;
+        font-weight: 300;
+        font-style: normal;
+        -webkit-font-smoothing: antialiased;
+    /* Fix for webkit rendering */
+        -webkit-text-size-adjust: 100%;
+        background: #282828;
+    }
+
+    .templatemo_contacttitle {
+        width: 100%;
+        margin-bottom: 10px;
+        font-size: 32px;
+        font-weight: bold;
+        color: #ffffff;
+        text-align: center;
+    }
+
+    .templatemo_sub_contacttitle {
+        width: 100%;
+        font-size: 22px;
+        color: #91bf24;
+        text-align: center;
+        margin-bottom: 50px;
+    }
+
+    .templatemo_contact {
+        margin: 30px;
+        width: 100%;
+        margin-left: 15%;
+    }
+
+    .templatemo_contactform input, textarea {
+        width: 100%;
+        background: #282828;
+        border: 1px solid #393939;
+        padding: 7px 10px;
+        margin: 0px 0px 10px 0px;
+        background-color: #FAFAFA;
+    }
+
+    .templatemo_contactform textarea {
+        height: 100px;
+    }
+
+
+    .templatemo_contactform .btn-primary {
+        background: #92bf24;
+        border: none;
+        border-radius: 0px;
+        color: #3d5602;
+        font-weight: 800;
+    }
+
+    .templatemo_contactform .btn-primary:hover {
+        background: #a6d82c;
+    }
     </style>
 </head>
 
@@ -81,19 +93,49 @@
 </header>
 
 <body style=background-color:#c6d9ef; style="background-repeat: no-repeat; background-size: cover;">
-    <h1><center> FORMULARIO DE CONTACTO </center></h1>
-    <h2> <center> Si tienes alguna duda favor de contestar el siguiente formulario con tus dudas y te responderemos a la brevedad posible. </center> </h2>
-    <section class="principal">
-        <form action="procesar_formulario.php" method="POST">
-            <label for="nombre">Nombre:</label>
-            <input id="nombre" name="nombre" placeholder="Nombre completo">
-            <label for="email">Email:</label>
-            <input id="email" name="email" type="email" placeholder="179719@upslp.edu.mx">
-            <label for="mensaje">Mensaje:</label>
-            <textarea id="mensaje" name="mensaje" placeholder="Danos tu mensaje"></textarea>
-            <input id="submit" name="submit" type="submit" value="Enviar">
-     </form>
-    </section>
+    
+    <script>
+        window.addEventListener('mouseover', initLandbot, { once: true });
+        window.addEventListener('touchstart', initLandbot, { once: true });
+        var myLandbot;
+        function initLandbot() {
+          if (!myLandbot) {
+            var s = document.createElement('script');s.type = 'text/javascript';s.async = true;
+            s.addEventListener('load', function() {
+              var myLandbot = new Landbot.Livechat({
+                configUrl: 'https://storage.googleapis.com/landbot.online/v3/H-1595368-GU1ENVM5JAC2ZKOW/index.json',
+              });
+            });
+            s.src = 'https://cdn.landbot.io/landbot-3/landbot-3.0.0.js';
+            var x = document.getElementsByTagName('script')[0];
+            x.parentNode.insertBefore(s, x);
+          }
+        }
+    </script>
+    
+    
+    <div class="row">
+    <div id="templatemo_contact" class="col-md-4 gallery-contact">
+    </div>
+    <div class="col-md-8 templatemo_contactform">
+    
+    <br>
+
+    <div class="templatemo_contacttitle">CONTACTO</div>
+     <div class="templatemo_sub_contacttitle">PARA MAYORES INFORMES PONGASE EN CONTACTO CON NOSOTROS</div>
+         <p> Llene los siguientes requerimientos. </p>
+ 
+            <form action="formulario_eppens.php" method="post">
+                <input type="text" name="name" id="name" class="name" placeholder="Nombre">
+                <input type="text" name="mail" id="mail" class="email" placeholder="Correo">
+                <input type="text" name="phone" id="subject" class="subject" placeholder="Teléfono">
+                <textarea name="message" class="message" placeholder="Escriba aquí su mensaje " id="message"></textarea>
+                <div class="clear"></div>
+                <div class="col-md-8"> 
+                <button type="submit" class="btn btn-primary">ENVIAR </button>
+        </div>
+            </form>
+    </div>
     
 </body>
 </html>

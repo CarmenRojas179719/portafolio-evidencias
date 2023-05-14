@@ -19,10 +19,10 @@
             <nav>
                 <ul>
                     <li><a href="index_secundaria.html">Inicio</a></li>
-                    <li><a href="admision.html">Proceso de admisión</a></li>
+                    <li><a href="Admisión.pdf">Proceso de admisión</a></li>
                     <li><a href="galeria.html">Galeria</a></li>
                     <li><a href="formulario_contacto_eppens.html">Contacto</a></li>
-                    <li><a href="ayuda_eppens.html">Ayuda</a></li>
+                    <li><a href="ayuda_eppens.html">Blog</a></li>
                 </ul>
             </nav>
         </td>
@@ -30,7 +30,28 @@
     </tr>
     </table>
 </header>
+
+   
 <body>
+    <script>
+        window.addEventListener('mouseover', initLandbot, { once: true });
+        window.addEventListener('touchstart', initLandbot, { once: true });
+        var myLandbot;
+        function initLandbot() {
+          if (!myLandbot) {
+            var s = document.createElement('script');s.type = 'text/javascript';s.async = true;
+            s.addEventListener('load', function() {
+              var myLandbot = new Landbot.Livechat({
+                configUrl: 'https://storage.googleapis.com/landbot.online/v3/H-1595368-GU1ENVM5JAC2ZKOW/index.json',
+              });
+            });
+            s.src = 'https://cdn.landbot.io/landbot-3/landbot-3.0.0.js';
+            var x = document.getElementsByTagName('script')[0];
+            x.parentNode.insertBefore(s, x);
+          }
+        }
+        </script>
+
     <br>
     <div class="info">
         <table class="MisionVision">
@@ -52,7 +73,7 @@
         </p>
         </td>
         <td>
-            <img src="galeria_4.JPG" width="100%";>
+            <img src="eppens_portada.jpg" width="100%";>
         </td>
         </table>
     </div>
@@ -68,7 +89,7 @@
         </table>
         </div>
         <div class="preguntas">
-            <h2 class="pf">Preguntas frecuentes</h2>
+            <h2 class="pf"> Ayuda <br> Preguntas frecuentes</h2>
         <p class="inscripcion">¿Cómo es el proceso de inscripción?</p>
         <div class="respuestas">
             <p><b>AVISO DE PROCESO DE INSCRIPCION AL CICLO ESCOLAR 2023-2024</b><br>Se les informa a todos los interesados para alumnos de nuevo ingreso que deben pasar a las oficinas de la institución para que se les brinde la informacion al respecto. Podrán acudir tanto en el turno matutino como en el vespertino.</p>
