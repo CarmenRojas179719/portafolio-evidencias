@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog|Sec.Of Francisco Eppens Helguera</title>
+    <link rel="shortcut icon" href="logo.png">
+    
+    <style>
+        
+        body
+         {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: #333;
+            color: #fff;
+            padding: 10px;
+        }
+
+        h1 {
+            margin: 0;
+        }
+
+        main {
+            margin: 20px;
+        }
+
+        h2 {
+            color: #333;
+        }
+
+        *{
+            padding: 0; 
+            margin: 0;
+            box-sizing: border-box;
+            font-family: sans-serif;
+         }
+            
+        
+        body
+        {
+            width: 100%; height: 100vh;
+            display: flex; justify-content: flex-start;
+            align-items: center;
+            flex-direction: column;
+            margin-top: 200px;
+            gap: 5px;
+            background-image: url(fondo_blog.png);
+            background-position: center center; background-repeat: no-repeat;
+            background-size: cover;
+        }
+
+        .contenedor
+        {
+        background-color: Irgba(255,255,255,0.7);
+        width: 600px;
+        height: 120px;
+        display: flex; justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        border-radius: 20px;
+        }
+
+        .contenedor-2
+        {
+            width: 600px;
+            height: auto;
+            background-color: Irgba(255,255,255,0.7);
+            display: flex;
+            justify-content: flex-start;
+            align-items: flex-start;
+            flex-direction: column;
+            padding: 30px 20px 30px 20px;
+            gap: 20px;
+            text-transform: capitalize;
+            border-radius: 20px;
+        }
+
+        .comentario
+        {
+            background-color: rgba(255,255,255,0.7);
+            width: 100%;
+            height: 60px;
+            display: flex;
+            Justify-content: flex-start;
+            align-items: center; padding: 0 0 0 20px;
+            border-radius: 20px;
+            color: black;
+        }
+
+        .contenedor-agg-com
+        {
+            display: flex;
+            flex-direction: row; justify-content: center;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .imagen-usuario
+        {
+            width: 50px;
+            height: 80px;
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+        }
+
+        img
+        {
+            width: 50px;
+        }
+
+
+        .input-com{
+            width: 500px;
+            height: 100px;
+            background: none; display: flex;
+            flex-direction: column;
+            Justify-content: baseline;
+            gap: 5px;
+        }
+
+        #nuevoComentario
+        {
+            outline: none;
+            border: 0; width: 100%;
+            height: 50px; padding: 0px 10px 0px 10px;
+            font-size: 15px;
+            background-color: transparent;
+            color: black;
+            border-bottom: 2px solid rgba(255,255,255,0);
+            transition-duration: 200ms;
+        }
+
+        #nuevoComentario::placeholder
+        {
+            color: black;
+        }
+
+        #nuevoComentario:focus
+        {
+            border-bottom: 2px solid red;
+        }
+
+        .btn-agg
+        {
+            height: 60px;
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
+            padding: 0px 5px 0px 8px;
+        }
+
+        button
+        {
+            padding: 12px 20px 12px 20px;
+            border-radius: 20px;
+            border: 0; 
+            outline: none;
+            font-size: 15px; 
+            cursor: pointer;
+        }
+
+        .close
+        {
+            font-size: 12px;
+            position: absolute;
+            right: 150px;
+            width: 20px;
+            z-index: 20;
+            transition-duration: 200ms;
+            display: block;
+            cursor: pointer; 
+            color: red;
+        }
+
+    </style>
+
+    <script>
+        
+        function nComentario()
+        {
+        let li = document.createElement("li");
+        let valoringresado = document.getElementById("nuevoComentario").value;
+        let text = document.createTextNode(valoringresado);
+        li.appendChild(text);
+
+        if(valoringresado===''){
+        alert("Ingrese un comentario!")
+        }else{
+            document.getElementById("comentarios").appendChild(li); 
+        }
+
+        document.getElementById("nuevoComentario").value = ""; 
+        li.className = "comentario";
+
+        let borrar = document.createElement("p");
+        borrar.innerHTML ("Borrar");
+        borrar.className= "close"; 
+        li.appendChild(borrar);
+
+        let close= document.getElementsByClassName("close");
+        let i;
+        for (i=0; i < close.length; i++)
+        {
+            close[i].onclick= function()
+            {
+                let div= this.parentElement; 
+                div.style.display = "none";
+            }
+        }
+    }
+
+    </script>
+
+</head>
+
+
+
+<body style=background-color:#c6d9ef; style="background-repeat: no-repeat; background-size: cover;">
+    
+    <script>
+        window.addEventListener('mouseover', initLandbot, { once: true });
+        window.addEventListener('touchstart', initLandbot, { once: true });
+        var myLandbot;
+        function initLandbot() {
+          if (!myLandbot) {
+            var s = document.createElement('script');s.type = 'text/javascript';s.async = true;
+            s.addEventListener('load', function() {
+              var myLandbot = new Landbot.Livechat({
+                configUrl: 'https://storage.googleapis.com/landbot.online/v3/H-1595368-GU1ENVM5JAC2ZKOW/index.json',
+              });
+            });
+            s.src = 'https://cdn.landbot.io/landbot-3/landbot-3.0.0.js';
+            var x = document.getElementsByTagName('script')[0];
+            x.parentNode.insertBefore(s, x);
+          }
+        }
+        </script>
+        
+    <header>
+        <h1>Espacio para Comentarios</h1>
+    </header>
+    <main>
+        <h1>AVISO</h2>
+        <p>Se le informa a toda nuestra comunidad educativa que el día Lunes 16 de Enero se <br> reanudan las actividades escolares de manera PRESENCIAL con la totalidad de los alumnos. <br>
+        <br> Solicitamos a todos los padres de familia y alumnos seguir atendiendo las recomendaciones <br> de la secretaría de salud en cuanto al uso del cubrebocas, 
+        lavado de manos y uso de gel antibacterial.</p>
+
+        <main class="contenedor">
+            <section class="contenedor-agg-com">
+            <div class="imagen-usuario">
+            <img src="usuario.png">
+            </div>
+            <div class="input-com">
+            <input id="nuevoComentario" type="text" placeholder="Nuevo Comentario..."> <div class="btn-age">
+            <button onclick="nComentario()">Comentar</button>
+            </div>
+            </div>
+            </section>
+            </main>
+            <ul id="comentarios" class="contenedor-2">
+            </ul>
+        </main>
+    
+        <script src="main.js"></script>
+</body>
+</html>

@@ -15,7 +15,6 @@
         font-weight: 300;
         font-style: normal;
         -webkit-font-smoothing: antialiased;
-    /* Fix for webkit rendering */
         -webkit-text-size-adjust: 100%;
         background: #282828;
     }
@@ -80,10 +79,10 @@
             <nav>
                 <ul>
                     <li><a href="index_secundaria.html">Inicio</a></li>
-                    <li><a href="admision.html">Proceso de admisión</a></li>
+                    <li><a href="Admisión.pdf">Proceso de admisión</a></li>
                     <li><a href="galeria.html">Galeria</a></li>
-                    <li><a href="contacto_eppens.html">Contacto</a></li>
-                    <li><a href="ayuda_eppens.html">Ayuda</a></li>
+                    <li><a href="formulario_contacto_eppens.html">Contacto</a></li>
+                    <li><a href="blog_eppens.html">Blog</a></li>
                 </ul>
             </nav>
         </td>
@@ -127,13 +126,12 @@
  
             <form action="formulario_eppens.php" method="post">
                 <input type="text" name="name" id="name" class="name" placeholder="Nombre">
-                <input type="text" name="mail" id="mail" class="email" placeholder="Correo">
-                <input type="text" name="phone" id="subject" class="subject" placeholder="Teléfono">
+                <input type="text" name="email" id="email" class="email" placeholder="Correo">
+                <input type="text" name="phone" id="phone" class="phone" placeholder="Teléfono">
                 <textarea name="message" class="message" placeholder="Escriba aquí su mensaje " id="message"></textarea>
+                <input type="submit" id="submit" name="submit" value="ENVIAR">
                 <div class="clear"></div>
-                <div class="col-md-8"> 
-                <button type="submit" class="btn btn-primary">ENVIAR </button>
-        </div>
+                </div>
             </form>
     </div>
     
