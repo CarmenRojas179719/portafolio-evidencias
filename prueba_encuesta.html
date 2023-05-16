@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Encuesta|Sec.OF.Francisco Eppens Helguera</title>
+    <link rel="shortcut icon" href="logo.png">
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<link href="https://fonts.googleapis.com/css?family=Charmonman" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Roboto+Condensed" rel="stylesheet">	
+    <script type="text/javascript" src="jquery-1.7.1.min.js"></script>
+    <script type="text/javascript" src="jquery-ui-1.8.17.custom.min.js"></script>
+    <script type="text/javascript" src="jspdf.js"></script>
+    <script type="text/javascript" src="jspdf.plugin.addimage.js"></script>
+    <script type="text/javascript" src="jspdf.plugin.from_html.js"></script>
+    <script type="text/javascript" src="jspdf.plugin.split_text_to_size.js"></script>
+    <script type="text/javascript" src="jspdf.plugin.standard_fonts_metrics.js"></script>
+    
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+
+        h1 {
+            text-align: center;
+        }
+
+        form {
+            max-width: 500px;
+            margin: 0 auto;
+        }
+
+        p {
+            font-weight: bold;
+            margin-top: 10px;
+        }
+
+        textarea {
+            width: 100%;
+        }
+
+        input[type="submit"] {
+            margin-top: 20px;
+        }
+
+        /* Estilos personalizados */
+
+        body {
+            background-color: #818de1;
+        }
+
+        form {
+            background-color: #ffffff;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.2);
+        }
+
+        input[type="submit"] {
+            background-color: #4CAF50;
+            color: #ffffff;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #45a049;
+        }
+
+    </style>
+</head>
+
+<script>
+    var total;
+    function califica()
+        {var total=0;
+            for (var x=1;x<=5;x++)
+            {
+            var res=0;
+            var nom="r"+x;
+            var resul=document.getElementsByName(nom);
+            for(var i=0;i<resul.length;i++)
+            {
+                if(resul[i].checked==true)
+                    res=parseInt(resul[i].value);
+            }
+            total=total+res;
+            document.getElementById("total").innerHTML="Puntos dado a nuestra pagina: "+total+" Puntos";
+            }
+            if(total==50)
+                document.getElementById("comentario").innerHTML="EXCELENTE!!!";
+            else
+                if(total<=40)
+                document.getElementById("comentario").innerHTML="Página Regular!!";
+            else
+                if(total<=30)
+                document.getElementById("comentario").innerHTML="Mejorar la página un poco más";
+                else
+                if(total<=20)
+                document.getElementById("comentario").innerHTML="Definitivamente mejorar la página";
+        }
+    function generar()
+        {
+            //Crear un objeto o instancia jsPDF
+            var doc= new jsPDF();
+    
+            //Definir tamaño de la letra
+            doc.setFontSize(40);
+    
+            //Color de Texto
+            doc.setTextColor(9,7,121);  
+            doc.text(40,20,"ENCUESTA");
+            doc.setTextColor(17,122,209); //Color formato RGB
+            doc.setFontSize(30);
+            doc.text(50,35,"Es importante tu particpación"); //Ubicación y texto
+            doc.setTextColor(0,0,0);
+            doc.setFontSize(20);
+            doc.text(20,50,"50 Puntos = Página Excelente.");
+            doc.text(20,70,"Mas o 40 Puntos= Buena Página.");
+            doc.text(20,90," Mas o 30 Puntos= Página Regular.");
+            doc.text(20,110,"Mas o menos 20 puntos= Mejorar la página un poco más.");
+            var string=doc.output('datauristring');
+            $('iframe').attr('src',string);
+        }
+    </script>
+
+
+<body>
+    <h1>Encuesta de Satisfacción del Servicio de la Página Web</h1>
+    <form>
+        
+        <p>1. ¿Cómo calificarías la facilidad de uso de nuestra página web?</p>
+        <label><input type="radio" name="r1" id="r1" value="10"/> Excelente</label><br>
+        <label><input type="radio" name="r1" id="r1" value="8"/> Buena</label><br>
+        <label><input type="radio" name="r1" id="r1" value="6"/> Regular</label><br>
+        <label><input type="radio" name="r1" id="r1" value="4"/> Mala</label><br>
+        
+        <p>2. ¿Estás satisfecho/a con la calidad de los servicios ofrecidos en nuestra página web?</p>
+        <label><input type="radio" name="r2" id="r2" value="10"/> Excelente</label><br>
+        <label><input type="radio" name="r2" id="r2" value="8"/> Buena</label><br>
+        <label><input type="radio" name="r2" id="r2" value="6"/> Regular</label><br>
+        <label><input type="radio" name="r2" id="r2" value="4"/> Mala</label><br>
+
+        <p>3. ¿Cómo valorarías la velocidad de carga de nuestra página web?</p>
+        <label><input type="radio" name="r3" id="r3" value="10"/> Excelente</label><br>
+        <label><input type="radio" name="r3" id="r3" value="8"/> Buena</label><br>
+        <label><input type="radio" name="r3" id="r3" value="6"/> Regular</label><br>
+        <label><input type="radio" name="r3" id="r3" value="4"/> Mala</label><br>
+
+        <p>4. ¿La información disponible en nuestra página web es clara y completa?</p>
+        <label><input type="radio" name="r4" id="r4" value="10"/> Excelente</label><br>
+        <label><input type="radio" name="r4" id="r4" value="8"/> Buena</label><br>
+        <label><input type="radio" name="r4" id="r4" value="6"/> Regular</label><br>
+        <label><input type="radio" name="r4" id="r4" value="4"/> Mala</label><br>
+
+        <p>5. ¿El diseño es atractivo?</p>
+        <label><input type="radio" name="r5" id="r5" value="10"/> Excelente</label><br>
+        <label><input type="radio" name="r5" id="r5" value="8"/> Buena</label><br>
+        <label><input type="radio" name="r5" id="r5" value="6"/> Regular</label><br>
+        <label><input type="radio" name="r5" id="r5" value="4"/> Mala</label><br>
+
+        <img src="banner_eppens.jpg"  width="500px">
+        <p>¡Gracias por participar en nuestra encuesta de satisfacción! Tu opinión es muy importante para nosotros.</p>
+        
+        <input type="button" value="Calificar" onclick="califica()">
+        <input type="button" value="Generar PDF" onclick="generar()">
+    </form>
+
+    <p></p>
+    <p id="total">   </p>
+    <p id="comentario">   </p>
+    <iframe frameborder="0" width="600" height="500"></iframe>
+</body>
+</html>
