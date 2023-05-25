@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Encuesta|Sec.OF.Francisco Eppens Helguera</title>
     <link rel="shortcut icon" href="logo.png">
+    <link rel="stylesheet" href="InicioEppens.css">
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 	<link href="https://fonts.googleapis.com/css?family=Charmonman" rel="stylesheet">
 	<link href="https://fonts.googleapis.com/css?family=Roboto+Condensed" rel="stylesheet">	
@@ -18,61 +19,78 @@
     <script type="text/javascript" src="jspdf.plugin.standard_fonts_metrics.js"></script>
     
     <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 20px;
-        }
+    body {
+        font-family: 'Roboto Condensed', sans-serif;
+        background-color: #f2f2f2;
+    }
 
-        h1 {
-            text-align: center;
-        }
+    #contiene {
+        max-width: 600px;
+        margin: 0 auto;
+        background-color: #fff;
+        padding: 20px;
+        border-radius: 5px;
+        box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+    }
 
-        form {
-            max-width: 500px;
-            margin: 0 auto;
-        }
+    h1 {
+        font-family: 'Charmonman', cursive;
+        text-align: center;
+        margin-bottom: 20px;
+    }
 
-        p {
-            font-weight: bold;
-            margin-top: 10px;
-        }
+    ul {
+        list-style-type: none;
+        padding: 0;
+    }
 
-        textarea {
-            width: 100%;
-        }
+    ul li {
+        font-weight: bold;
+        margin-bottom: 10px;
+    }
 
-        input[type="submit"] {
-            margin-top: 20px;
-        }
+    input[type="radio"] {
+        margin-right: 5px;
+    }
 
-        /* Estilos personalizados */
+    input[type="button"] {
+        padding: 10px 20px;
+        background-color: #4CAF50;
+        border: none;
+        color: white;
+        font-weight: bold;
+        cursor: pointer;
+    }
 
-        body {
-            background-color: #818de1;
-        }
-
-        form {
-            background-color: #ffffff;
-            padding: 20px;
-            border-radius: 5px;
-            box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.2);
-        }
-
-        input[type="submit"] {
-            background-color: #4CAF50;
-            color: #ffffff;
-            padding: 10px 20px;
-            border: none;
-            border-radius: 4px;
-            cursor: pointer;
-        }
-
-        input[type="submit"]:hover {
-            background-color: #45a049;
-        }
+    p {
+        margin-top: 20px;
+        font-weight: bold;
+    }
 
     </style>
 </head>
+
+<header>
+    <table class="banner">
+        <tr>
+        
+        <td><p style="font-size: 20px;">Escuela Secundaria Francisco Eppens Helguera</p></td>
+        <td>
+            <nav>
+                <ul>
+                    <li><a href="index_secundaria.html">Inicio</a></li>
+                    <li><a href="Admisión.pdf">Proceso de admisión</a></li>
+                    <li><a href="galeria.html">Galeria</a></li>
+                    <li><a href="formulario_contacto_eppens.html">Contacto</a></li>
+                    <li><a href="blog_eppens.html">Blog</a></li>
+                    <li><a href="prueba_encuesta.html">Encuesta Satisfacción</a></li>
+                </ul>
+            </nav>
+        </td>
+        
+    </tr>
+    </table>
+</header>
 
 <script>
     var total;
@@ -105,13 +123,13 @@
         }
     function generar()
         {
-            //Crear un objeto o instancia jsPDF
+            
             var doc= new jsPDF();
     
-            //Definir tamaño de la letra
-            doc.setFontSize(40);
+            
+            doc.setFontSize(65);
     
-            //Color de Texto
+            
             doc.setTextColor(9,7,121);  
             doc.text(40,20,"ENCUESTA");
             doc.setTextColor(17,122,209); //Color formato RGB
@@ -130,6 +148,25 @@
 
 
 <body>
+    <script>
+        window.addEventListener('mouseover', initLandbot, { once: true });
+        window.addEventListener('touchstart', initLandbot, { once: true });
+        var myLandbot;
+        function initLandbot() {
+          if (!myLandbot) {
+            var s = document.createElement('script');s.type = 'text/javascript';s.async = true;
+            s.addEventListener('load', function() {
+              var myLandbot = new Landbot.Livechat({
+                configUrl: 'https://storage.googleapis.com/landbot.online/v3/H-1595368-GU1ENVM5JAC2ZKOW/index.json',
+              });
+            });
+            s.src = 'https://cdn.landbot.io/landbot-3/landbot-3.0.0.js';
+            var x = document.getElementsByTagName('script')[0];
+            x.parentNode.insertBefore(s, x);
+          }
+        }
+    </script>
+
     <h1>Encuesta de Satisfacción del Servicio de la Página Web</h1>
     <form>
         
